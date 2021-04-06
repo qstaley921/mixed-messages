@@ -53,14 +53,18 @@ header {
 
 .icon-btn {
   background: white;
+  border: solid 2px $secondary-dark;
   padding: 4px 5px 5px;
   border-radius: 100%;
   box-shadow: -4px 4px $primary-dark,
               -2px 2px $primary-dark,
               -1px 1px $primary-dark;
   transition: all 0.15ms ease-out;
+}
 
-  &:hover, &:focus {
+.icon-bag {
+
+  &:hover .icon-btn, &:focus .icon-btn {
     @extend .icon-active;
     outline: none;
   }
@@ -68,16 +72,13 @@ header {
 
 .icon-active {
   box-shadow: none;
+  right: 2px;
+  bottom: -2px;
 }
 
 .placeholder {
   @extend .btn;
   opacity: 0;
-}
-
-.icon-placeholder {
-  @extend .icon-btn;
-  opacity: 0%;
 }
 
 .active {

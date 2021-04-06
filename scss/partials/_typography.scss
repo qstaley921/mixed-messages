@@ -129,7 +129,8 @@ p {
   transition: all 0.15s ease-out;
 }
 
-.icon-btn {
+.icon-bag {
+
   &:hover .arrow, &:focus .arrow {
     color: $primary-light;
   }

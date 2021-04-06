@@ -17,20 +17,22 @@
   width: 100%;
   display: flex;
   overflow-x: scroll;
-  padding: 5px 50px 20px 60px; }
+  padding: 5px 50px 20px 10px; }
 
-.icon-btn, .icon-placeholder {
+.icon-bag {
+  display: block;
+  min-height: 50px;
+  min-width: 50px;
+  margin-right: 10px;
+  position: relative; }
+
+.icon-btn {
   position: absolute;
   right: -2px;
-  bottom: 4px;
-  transition: all 0.15s ease-out; }
+  bottom: 4px; }
 
-.icon-active, .icon-btn:hover, .icon-placeholder:hover, .icon-btn:focus, .icon-placeholder:focus {
-  right: 3px;
-  bottom: -3px; }
-
-.icon-placeholder {
-  z-index: -10; }
+.r-arrow-bag {
+  margin-left: -7px; }
 
 .btn-bag {
   display: inline-block;
@@ -47,8 +49,9 @@
     bottom: -1px;
     left: -3px; }
 
-.r-arrow-bag {
-  margin-left: 42px; }
+.spacer {
+  display: block;
+  min-width: 5px; }
 
 .title-text {
   margin-top: 20px; }
@@ -182,7 +185,7 @@ p {
   color: #AEC3B0;
   transition: all 0.15s ease-out; }
 
-.icon-btn:hover .arrow, .icon-placeholder:hover .arrow, .icon-btn:focus .arrow, .icon-placeholder:focus .arrow {
+.icon-bag:hover .arrow, .icon-bag:focus .arrow {
   color: #598392; }
 
 body {
@@ -222,23 +225,24 @@ body {
 .btn-bag:hover .btn, .btn-bag:hover .placeholder, .btn-bag:focus .btn, .btn-bag:focus .placeholder {
   outline: none; }
 
-.icon-btn, .icon-placeholder {
+.icon-btn {
   background: white;
+  border: solid 2px #124559;
   padding: 4px 5px 5px;
   border-radius: 100%;
   box-shadow: -4px 4px #01161E, -2px 2px #01161E, -1px 1px #01161E;
   transition: all 0.15ms ease-out; }
-  .icon-btn:hover, .icon-placeholder:hover, .icon-btn:focus, .icon-placeholder:focus {
-    outline: none; }
 
-.icon-active, .icon-btn:hover, .icon-placeholder:hover, .icon-btn:focus, .icon-placeholder:focus {
-  box-shadow: none; }
+.icon-bag:hover .icon-btn, .icon-bag:focus .icon-btn {
+  outline: none; }
+
+.icon-active, .icon-bag:hover .icon-btn, .icon-bag:focus .icon-btn {
+  box-shadow: none;
+  right: 2px;
+  bottom: -2px; }
 
 .placeholder {
   opacity: 0; }
-
-.icon-placeholder {
-  opacity: 0%; }
 
 .active, .btn:focus, .placeholder:focus, .btn-bag:hover .btn, .btn-bag:hover .placeholder, .btn-bag:focus .btn, .btn-bag:focus .placeholder {
   box-shadow: none;
