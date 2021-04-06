@@ -1,0 +1,87 @@
+// ******************************
+//  DOCUMENT STRUCTURE  
+// ******************************
+
+* {
+  margin: 0; 
+  padding: 0; 
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+// ******************************
+//  BUTTON STRUCTURE  
+// ******************************
+
+.btn-box {
+  width: 100%; 
+  display: flex; 
+  // background: lightgray;
+  overflow-x: scroll;
+  padding: 5px 50px 20px 10px;
+
+  .r-arrow {
+    margin-right: 10px;
+  }
+}
+
+// the jacket to the btn 
+.btn-bag {
+  display: inline-block;
+  height: 50px;
+  margin-right: 10px;
+  position: relative;
+
+  .btn {
+    display: block;
+    position: absolute;
+  }
+
+  .placeholder {
+    position: initial;
+    z-index: -10;
+  }
+
+  .active {
+    bottom: -1px;
+    left: -3px;
+  }
+}
+
+// ******************************
+//  TEXT AND TEXT-BOX STRUCTURE
+// ******************************
+
+.title-text {
+  margin-top: 20px;
+}
+
+.element-box {
+  background-color: white;
+  border: solid 1px $primary-dark;
+  box-shadow: inset 0px 0px 3px rgba(0,0,0,0.5);
+  border-radius: 5px;
+  padding: 10px 15px;
+  z-index: -1;
+  margin-top: -5px;
+  margin: -6.5px 15px 20px;
+}
+
+.message-box {
+  @extend .element-box;
+  margin-top: 25px;
+  padding: 30px 10px;
+  position: relative;
+}
+
+.left-quote {
+  position: absolute;
+  top: -35px;
+  left: -10px;
+}
+
+.right-quote {
+  position: absolute;
+  bottom: -80px;
+  right: -10px;
+}

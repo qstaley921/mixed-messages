@@ -1,0 +1,104 @@
+// For saving all the typography
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Coustard:wght@900&display=swap');
+
+// ******************************
+//  VARIABLES 
+// ******************************
+
+@mixin font {
+  font-family: 'Josefin Sans', sans-serif;
+  color: $primary-dark;
+  font-size: 22px;
+}
+
+@mixin quote {
+  font-family: 'Coustard', serif;
+  color: $accent-color;
+  font-size: 85px;
+  text-shadow: -3px 3px $primary-dark;
+}
+
+@mixin light-font {
+  @include font();
+  font-weight: 200;
+}
+
+@mixin light-italic {
+  @include light-font();
+  font-style: italic;
+  line-height: 1.2;
+}
+
+@mixin medium-font {
+  @include font();
+  font-weight: 400;
+}
+
+@mixin medium-italic {
+  @include medium-font();
+}
+
+@mixin heavy-font {
+  @include font();
+  font-size: 28px;
+  font-weight: 600;
+}
+
+@mixin heavy-italic {
+  @include heavy-font();
+  font-style: italic;
+}
+
+// ******************************
+//  STYLES BELOW — in order of hierarchy 
+// ******************************
+
+.title-text {
+  @include heavy-font(); 
+  text-align: center;
+  font-size: 40px;
+  text-shadow: -2px 2px $primary-light;
+}
+
+.sub-text {
+  @include light-italic();
+  text-align: justify;
+}
+
+.header-container {
+  display: block;
+  height: 40px;
+  width: 80%; 
+  position: relative;
+  border-bottom: solid 3px $secondary-dark;
+  margin-bottom: 10px;
+
+  .header-text {
+    @include heavy-font();
+    display: inline-block;
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+  }
+}
+
+p {
+  @include medium-font();
+}
+
+.message-box {
+ p {
+   color: white;
+   font-size: 30px;
+ }
+
+ .left-quote, .right-quote {
+   @include quote();
+ }
+}
+
+.arrow {
+  font-size: 32px;
+  color: $accent-color;
+}

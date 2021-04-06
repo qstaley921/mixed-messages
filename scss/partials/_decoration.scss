@@ -1,0 +1,43 @@
+// For decorations: 
+
+body {
+  background-color: $secondary-light;
+}
+
+.btn {
+  background: white;
+  padding: 10px 20px;
+  border: solid 2px $secondary-dark;
+  border-radius: 100px;
+  @include medium-italic();
+  box-shadow: -4px 4px $primary-dark,
+              -2px 2px $primary-dark,
+              -1px 1px $primary-dark;
+  transition: all 0.15s ease-out;
+  white-space: nowrap;
+}
+
+.icon-btn {
+  background: white;
+  padding: 4px 5px 5px;
+  border-radius: 100%;
+  box-shadow: -4px 4px $primary-dark,
+              -2px 2px $primary-dark,
+              -1px 1px $primary-dark;
+}
+
+.placeholder {
+  @extend .btn;
+  opacity: 0;
+}
+
+.active {
+  box-shadow: none;
+  box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.5);
+  background-color: $primary-light;
+  color: white;
+}
+
+.message-box{
+  background-color: $primary-light;
+}

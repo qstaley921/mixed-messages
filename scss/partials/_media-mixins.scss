@@ -1,0 +1,20 @@
+// All variables and mixins will start in this file and extend outwards
+
+// Site Colors: 
+$primary-dark: #01161E;
+$primary-light: #598392;
+$secondary-dark: #124559;
+$secondary-light: #EFF6E0;
+$accent-color: #AEC3B0;
+
+@mixin media-tablet {
+  @media (min-width: 450px) {
+     @content; 
+  }
+}
+
+@mixin media-desktop {
+  @media (min-width: 700px) {
+    @content; 
+  }
+}
