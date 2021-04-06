@@ -191,6 +191,9 @@ p {
 body {
   background-color: #EFF6E0; }
 
+button {
+  outline: none; }
+
 @media (min-width: 700px) {
   header {
     background-color: white;
