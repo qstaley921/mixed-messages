@@ -4,6 +4,23 @@ body {
   background-color: $secondary-light;
 }
 
+header {
+
+  @include media-desktop() {
+    background-color: white;
+    border: solid 1px $primary-dark;
+    box-shadow: inset 0px 0px 3px rgba(0,0,0,0.5);
+    border-radius: 5px;
+  }
+}
+
+.element-box {
+  background-color: white;
+  border: solid 1px $primary-dark;
+  box-shadow: inset 0px 0px 3px rgba(0,0,0,0.5);
+  border-radius: 5px;
+}
+
 .btn {
   background: white;
   padding: 10px 20px;
@@ -15,6 +32,23 @@ body {
               -1px 1px $primary-dark;
   transition: all 0.15s ease-out;
   white-space: nowrap;
+
+  @include media-desktop() {
+    background-color: $secondary-light;
+  }
+
+  &:focus {
+    @extend .active;
+    outline: none;
+  }
+}
+
+.btn-bag {
+
+  &:hover .btn, &:focus .btn {
+    @extend .active;
+    outline: none;
+  }
 }
 
 .icon-btn {
@@ -24,11 +58,26 @@ body {
   box-shadow: -4px 4px $primary-dark,
               -2px 2px $primary-dark,
               -1px 1px $primary-dark;
+  transition: all 0.15ms ease-out;
+
+  &:hover, &:focus {
+    @extend .icon-active;
+    outline: none;
+  }
+}
+
+.icon-active {
+  box-shadow: none;
 }
 
 .placeholder {
   @extend .btn;
   opacity: 0;
+}
+
+.icon-placeholder {
+  @extend .icon-btn;
+  opacity: 0%;
 }
 
 .active {

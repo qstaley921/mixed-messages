@@ -6,13 +6,31 @@
   text-decoration: none;
   box-sizing: border-box; }
 
+@media (min-width: 700px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh; } }
+
 .btn-box {
   width: 100%;
   display: flex;
   overflow-x: scroll;
-  padding: 5px 50px 20px 10px; }
-  .btn-box .r-arrow {
-    margin-right: 10px; }
+  padding: 5px 50px 20px 60px; }
+
+.icon-btn, .icon-placeholder {
+  position: absolute;
+  right: -2px;
+  bottom: 4px;
+  transition: all 0.15s ease-out; }
+
+.icon-active, .icon-btn:hover, .icon-placeholder:hover, .icon-btn:focus, .icon-placeholder:focus {
+  right: 3px;
+  bottom: -3px; }
+
+.icon-placeholder {
+  z-index: -10; }
 
 .btn-bag {
   display: inline-block;
@@ -25,27 +43,58 @@
   .btn-bag .placeholder {
     position: initial;
     z-index: -10; }
-  .btn-bag .active {
+  .btn-bag .active, .btn-bag .btn:focus, .btn-bag .placeholder:focus, .btn-bag:hover .btn, .btn-bag:hover .placeholder, .btn-bag:focus .btn, .btn-bag:focus .placeholder {
     bottom: -1px;
     left: -3px; }
 
+.r-arrow-bag {
+  margin-left: 42px; }
+
 .title-text {
   margin-top: 20px; }
+  @media (min-width: 450px) {
+    .title-text {
+      margin-top: 30px; } }
+
+@media (min-width: 450px) {
+  .q-container {
+    width: 100%; } }
+
+@media (min-width: 450px) {
+  nav {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center; } }
+
+@media (min-width: 700px) {
+  header {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 550px; } }
+
+@media (min-width: 450px) {
+  main {
+    width: 100%;
+    display: flex;
+    flex-direction: column; } }
 
 .element-box, .message-box {
-  background-color: white;
-  border: solid 1px #01161E;
-  box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
   padding: 10px 15px;
   z-index: -1;
   margin-top: -5px;
   margin: -6.5px 15px 20px; }
+  @media (min-width: 450px) {
+    .element-box, .message-box {
+      max-width: 550px; } }
 
 .message-box {
   margin-top: 25px;
   padding: 30px 10px;
   position: relative; }
+  @media (min-width: 700px) {
+    .message-box {
+      align-self: center; } }
 
 .left-quote {
   position: absolute;
@@ -66,6 +115,9 @@
   text-align: center;
   font-size: 40px;
   text-shadow: -2px 2px #598392; }
+  @media (min-width: 450px) {
+    .title-text {
+      font-size: 50px; } }
 
 .sub-text {
   font-family: 'Josefin Sans', sans-serif;
@@ -75,6 +127,10 @@
   font-style: italic;
   line-height: 1.2;
   text-align: justify; }
+  @media (min-width: 450px) {
+    .sub-text {
+      font-size: 25px;
+      line-height: 1.4; } }
 
 .header-container {
   display: block;
@@ -83,6 +139,9 @@
   position: relative;
   border-bottom: solid 3px #124559;
   margin-bottom: 10px; }
+  @media (min-width: 450px) {
+    .header-container {
+      width: 75%; } }
   .header-container .header-text {
     font-family: 'Josefin Sans', sans-serif;
     color: #01161E;
@@ -93,6 +152,9 @@
     position: absolute;
     bottom: -5px;
     right: 0; }
+    @media (min-width: 450px) {
+      .header-container .header-text {
+        font-size: 32px; } }
 
 p {
   font-family: 'Josefin Sans', sans-serif;
@@ -109,12 +171,34 @@ p {
   font-size: 85px;
   text-shadow: -3px 3px #01161E; }
 
+@media (min-width: 700px) {
+  #message-header {
+    margin-top: 30px;
+    width: 50%; } }
+
 .arrow {
   font-size: 32px;
-  color: #AEC3B0; }
+  color: #AEC3B0;
+  transition: all 0.15s ease-out; }
+
+.icon-btn:hover .arrow, .icon-placeholder:hover .arrow, .icon-btn:focus .arrow, .icon-placeholder:focus .arrow {
+  color: #598392; }
 
 body {
   background-color: #EFF6E0; }
+
+@media (min-width: 700px) {
+  header {
+    background-color: white;
+    border: solid 1px #01161E;
+    box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.5);
+    border-radius: 5px; } }
+
+.element-box, .message-box {
+  background-color: white;
+  border: solid 1px #01161E;
+  box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.5);
+  border-radius: 5px; }
 
 .btn, .placeholder {
   background: white;
@@ -128,17 +212,34 @@ body {
   box-shadow: -4px 4px #01161E, -2px 2px #01161E, -1px 1px #01161E;
   transition: all 0.15s ease-out;
   white-space: nowrap; }
+  @media (min-width: 700px) {
+    .btn, .placeholder {
+      background-color: #EFF6E0; } }
+  .btn:focus, .placeholder:focus {
+    outline: none; }
 
-.icon-btn {
+.btn-bag:hover .btn, .btn-bag:hover .placeholder, .btn-bag:focus .btn, .btn-bag:focus .placeholder {
+  outline: none; }
+
+.icon-btn, .icon-placeholder {
   background: white;
   padding: 4px 5px 5px;
   border-radius: 100%;
-  box-shadow: -4px 4px #01161E, -2px 2px #01161E, -1px 1px #01161E; }
+  box-shadow: -4px 4px #01161E, -2px 2px #01161E, -1px 1px #01161E;
+  transition: all 0.15ms ease-out; }
+  .icon-btn:hover, .icon-placeholder:hover, .icon-btn:focus, .icon-placeholder:focus {
+    outline: none; }
+
+.icon-active, .icon-btn:hover, .icon-placeholder:hover, .icon-btn:focus, .icon-placeholder:focus {
+  box-shadow: none; }
 
 .placeholder {
   opacity: 0; }
 
-.active {
+.icon-placeholder {
+  opacity: 0%; }
+
+.active, .btn:focus, .placeholder:focus, .btn-bag:hover .btn, .btn-bag:hover .placeholder, .btn-bag:focus .btn, .btn-bag:focus .placeholder {
   box-shadow: none;
   box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.5);
   background-color: #598392;

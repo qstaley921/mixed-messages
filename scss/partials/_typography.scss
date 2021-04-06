@@ -28,6 +28,11 @@
   @include light-font();
   font-style: italic;
   line-height: 1.2;
+
+  @include media-tablet() {
+    font-size: 25px;
+    line-height: 1.4; 
+  }
 }
 
 @mixin medium-font {
@@ -59,6 +64,10 @@
   text-align: center;
   font-size: 40px;
   text-shadow: -2px 2px $primary-light;
+
+  @include media-tablet() {
+    font-size: 50px; 
+  }
 }
 
 .sub-text {
@@ -74,12 +83,20 @@
   border-bottom: solid 3px $secondary-dark;
   margin-bottom: 10px;
 
+  @include media-tablet() {
+    width: 75%;
+  }
+
   .header-text {
     @include heavy-font();
     display: inline-block;
     position: absolute;
     bottom: -5px;
     right: 0;
+
+    @include media-tablet() {
+      font-size: 32px;
+    }
   }
 }
 
@@ -98,7 +115,22 @@ p {
  }
 }
 
+#message-header {
+
+  @include media-desktop() {
+    margin-top: 30px;
+    width: 50%;
+  }
+}
+
 .arrow {
   font-size: 32px;
-  color: $accent-color;
+  color: $accent-color; 
+  transition: all 0.15s ease-out;
+}
+
+.icon-btn {
+  &:hover .arrow, &:focus .arrow {
+    color: $primary-light;
+  }
 }
