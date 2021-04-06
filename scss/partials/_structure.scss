@@ -146,6 +146,7 @@ main {
 
   @include media-desktop() {
     align-self: center;
+    padding: 50px 30px;
   }
 }
 

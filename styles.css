@@ -94,7 +94,8 @@
   position: relative; }
   @media (min-width: 700px) {
     .message-box {
-      align-self: center; } }
+      align-self: center;
+      padding: 50px 30px; } }
 
 .left-quote {
   position: absolute;
