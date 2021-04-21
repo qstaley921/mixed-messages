@@ -48,6 +48,15 @@ header {
   }
 }
 
+.btn-box::-webkit-scrollbar {
+  display: none;
+}
+
+.btn-box {
+  -ms-overflow-style: none;
+  scrollbar-width: none; 
+}
+
 .btn-bag {
 
   &:hover .btn, &:focus .btn {
