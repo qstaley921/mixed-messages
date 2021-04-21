@@ -225,6 +225,13 @@ button {
   .btn:focus, .placeholder:focus {
     outline: none; }
 
+.btn-box::-webkit-scrollbar {
+  display: none; }
+
+.btn-box {
+  -ms-overflow-style: none;
+  scrollbar-width: none; }
+
 .btn-bag:hover .btn, .btn-bag:hover .placeholder, .btn-bag:focus .btn, .btn-bag:focus .placeholder {
   outline: none; }
 
